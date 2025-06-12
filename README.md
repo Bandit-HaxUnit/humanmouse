@@ -16,6 +16,11 @@
 - **Customizable**: Support for custom movement data and parameters
 - **Cross-Platform**: Works on Windows, macOS, and Linux
 
+## Demo
+
+https://github.com/user-attachments/assets/c7814b1a-8ab8-4d65-a337-27ded0c4507f
+
+
 ## 📦 Installation
 
 Install SmartMouse using pip:

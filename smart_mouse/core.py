@@ -442,11 +442,11 @@ class SmartMouse:
         
         return stats
     
-    def click(self, button: Button = Button.left, n: int = 1, interval: float = 0.0, **kwargs):
+    def click(self, button: Button = Button.left, n: int = 1, **kwargs):
         """
         Click the mouse button.
         """
-        self.mouse.click(button, n, interval, **kwargs)
+        self.mouse.click(button, n, **kwargs)
 
 
 # Utility functions for package users
