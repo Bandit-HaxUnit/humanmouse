@@ -6,7 +6,7 @@ This script demonstrates how to use the HumanMouse package for human-like mouse 
 """
 
 import time
-from human_mouse import HumanMouseMover, create_mover, generate_random_points
+from smart_mouse import SmartMouse, create_mover, generate_random_points
 
 
 def basic_example():
@@ -14,7 +14,7 @@ def basic_example():
     print("=== Basic Example ===")
     
     # Create a mover (uses built-in movement data)
-    mover = HumanMouseMover(enable_mouse_control=False)  # Set to True to actually move mouse
+    mover = SmartMouse(enable_mouse_control=False)  # Set to True to actually move mouse
     
     # Move to a specific coordinate
     print("Moving to (500, 300)...")
@@ -54,7 +54,7 @@ def callback_example():
     """Example with movement callback."""
     print("\n=== Callback Example ===")
     
-    mover = HumanMouseMover(enable_mouse_control=False)
+    mover = SmartMouse(enable_mouse_control=False)
     
     def movement_callback(x, y, step_index):
         """Callback function called for each movement step."""
@@ -69,7 +69,7 @@ def path_generation_example():
     """Example of generating paths without actually moving."""
     print("\n=== Path Generation Example ===")
     
-    mover = HumanMouseMover(enable_mouse_control=False)
+    mover = SmartMouse(enable_mouse_control=False)
     
     # Generate a path without moving
     start_x, start_y = 100, 100

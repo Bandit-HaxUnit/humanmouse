@@ -5,19 +5,19 @@ A Python package for simulating realistic mouse movements using recorded human m
 """
 
 from .core import (
-    HumanMouseMover,
+    SmartMouse,
     MouseMovementError,
     create_mover,
     generate_random_points
 )
 
-__version__ = "1.0.0"
+__version__ = "1.0.3"
 __author__ = "HumanMouse Team"
 __email__ = "contact@humanmouse.com"
 __description__ = "Human-like mouse movement simulation using recorded patterns"
 
 __all__ = [
-    "HumanMouseMover",
+    "SmartMouse",
     "MouseMovementError", 
     "create_mover",
     "generate_random_points"

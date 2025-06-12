@@ -20,7 +20,7 @@ except ImportError:
     Controller = None
 
 __version__ = "1.0.0"
-__all__ = ["HumanMouseMover", "MouseMovementError"]
+__all__ = ["SmartMouse", "MouseMovementError"]
 
 
 class MouseMovementError(Exception):
@@ -28,7 +28,7 @@ class MouseMovementError(Exception):
     pass
 
 
-class HumanMouseMover:
+class SmartMouse:
     """
     A class for generating human-like mouse movements using recorded movement patterns.
     
@@ -118,7 +118,7 @@ class HumanMouseMover:
             String representation of the distance bucket
         """
         if thresholds is None:
-            thresholds = HumanMouseMover.DEFAULT_DISTANCE_THRESHOLDS
+            thresholds = SmartMouse.DEFAULT_DISTANCE_THRESHOLDS
             
         for threshold in thresholds:
             if distance <= threshold:
@@ -442,18 +442,18 @@ class HumanMouseMover:
 
 
 # Utility functions for package users
-def create_mover(mouse_data_file: Optional[Union[str, Path]] = None, **kwargs) -> HumanMouseMover:
+def create_mover(mouse_data_file: Optional[Union[str, Path]] = None, **kwargs) -> SmartMouse:
     """
-    Convenience function to create a HumanMouseMover instance.
+    Convenience function to create a SmartMouse instance.
     
     Args:
         mouse_data_file: Path to mouse movement data file (optional - uses built-in data if not provided)
-        **kwargs: Additional arguments passed to HumanMouseMover
+        **kwargs: Additional arguments passed to SmartMouse
         
     Returns:
-        HumanMouseMover instance
+        SmartMouse instance
     """
-    return HumanMouseMover(mouse_data_file=mouse_data_file, **kwargs)
+    return SmartMouse(mouse_data_file=mouse_data_file, **kwargs)
 
 
 def generate_random_points(num_points: int, 

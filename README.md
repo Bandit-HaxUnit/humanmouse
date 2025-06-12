@@ -1,10 +1,10 @@
-# HumanMouse 🖱️
+# SmartMouse 🖱️
 
-[![PyPI version](https://badge.fury.io/py/humanmouse.svg)](https://badge.fury.io/py/humanmouse)
-[![Python versions](https://img.shields.io/pypi/pyversions/humanmouse.svg)](https://pypi.org/project/humanmouse/)
+[![PyPI version](https://badge.fury.io/py/smart-mouse.svg)](https://badge.fury.io/py/smart-mouse)
+[![Python versions](https://img.shields.io/pypi/pyversions/smart-mouse.svg)](https://pypi.org/project/smart-mouse/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**HumanMouse** is a Python package that simulates realistic, human-like mouse movements using recorded movement patterns from real users. Unlike simple linear interpolation or basic curves, HumanMouse uses actual human movement data to create authentic mouse trajectories with realistic timing.
+**SmartMouse** is a Python package that simulates realistic, human-like mouse movements using recorded movement patterns from real users. Unlike simple linear interpolation or basic curves, SmartMouse uses actual human movement data to create authentic mouse trajectories with realistic timing.
 
 ## 🌟 Features
 
@@ -18,16 +18,16 @@
 
 ## 📦 Installation
 
-Install HumanMouse using pip:
+Install SmartMouse using pip:
 
 ```bash
-pip install humanmouse
+pip install smart-mouse
 ```
 
 Or install from source:
 
 ```bash
-git clone https://github.com/humanmouse/humanmouse.git
+git clone https://github.com/Bandit-HaxUnit/humanmouse.git
 cd humanmouse
 pip install -e .
 ```
@@ -37,10 +37,10 @@ pip install -e .
 ### Basic Usage
 
 ```python
-from humanmouse import HumanMouseMover
+from smart_mouse import SmartMouse
 
 # Create a mover instance (uses built-in movement data)
-mover = HumanMouseMover()
+mover = SmartMouse()
 
 # Move to a specific coordinate
 mover.move_to(500, 300)
@@ -53,7 +53,7 @@ mover.move_along_path(points)
 ### Simple API
 
 ```python
-from humanmouse import create_mover
+from smart_mouse import create_mover
 
 # Even simpler way to create a mover
 mover = create_mover()
@@ -63,10 +63,10 @@ mover.move_to(800, 600)
 ### Advanced Usage
 
 ```python
-from humanmouse import HumanMouseMover, generate_random_points
+from smart_mouse import SmartMouse, generate_random_points
 
 # Create mover with custom settings
-mover = HumanMouseMover(
+mover = SmartMouse(
     enable_mouse_control=True,  # Set to False for testing
     distance_thresholds=[10, 20, 50, 100, 200, 500]  # Custom distance categories
 )
@@ -87,7 +87,7 @@ print("Movement data stats:", mover.get_stats())
 
 ```python
 # Use your own movement data file
-mover = HumanMouseMover(mouse_data_file="my_custom_movements.json")
+mover = SmartMouse(mouse_data_file="my_custom_movements.json")
 
 # Or provide movement data directly
 custom_data = {
@@ -101,7 +101,7 @@ custom_data = {
         ]
     }
 }
-mover = HumanMouseMover(mouse_data=custom_data)
+mover = SmartMouse(mouse_data=custom_data)
 ```
 
 ### Callbacks and Monitoring
@@ -117,14 +117,14 @@ print(f"Movement completed with {len(path)} steps")
 
 ## 📖 API Reference
 
-### HumanMouseMover
+### SmartMouse
 
 The main class for generating human-like mouse movements.
 
 #### Constructor
 
 ```python
-HumanMouseMover(
+SmartMouse(
     mouse_data_file=None,     # Optional path to movement data file
     mouse_data=None,          # Optional movement data dict
     distance_thresholds=None, # Custom distance buckets
@@ -145,7 +145,7 @@ HumanMouseMover(
 
 ### Utility Functions
 
-- `create_mover(**kwargs)` - Convenience function to create a HumanMouseMover
+- `create_mover(**kwargs)` - Convenience function to create a SmartMouse
 - `generate_random_points(num_points, screen_width, screen_height, padding=100)` - Generate random coordinates
 
 ### Movement Data Format
@@ -174,7 +174,7 @@ Directions are: "N", "NE", "E", "SE", "S", "SW", "W", "NW".
 ### Setting Up Development Environment
 
 ```bash
-git clone https://github.com/humanmouse/humanmouse.git
+git clone https://github.com/Bandit-HaxUnit/humanmouse.git
 cd humanmouse
 pip install -e ".[dev]"
 ```
@@ -228,4 +228,4 @@ This package is intended for legitimate automation, testing, and accessibility p
 
 ---
 
-**Made with ❤️ by the HumanMouse Team**
+**Made with ❤️ by HaxUnit**

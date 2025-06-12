@@ -1,8 +1,8 @@
 include README.md
 include LICENSE
 include requirements.txt
-recursive-include human_mouse *.json
-recursive-include human_mouse *.py
+recursive-include smart_mouse *.json
+recursive-include smart_mouse *.py
 exclude tests/*
 exclude .git*
 exclude .pytest_cache/*

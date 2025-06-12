@@ -42,11 +42,11 @@ jobs:
     - name: Type check with mypy
       run: |
         pip install mypy
-        mypy human_mouse --ignore-missing-imports || true
+        mypy smart_mouse --ignore-missing-imports || true
     
     - name: Test with pytest
       run: |
-        pytest --cov=human_mouse --cov-report=xml --cov-report=term-missing || true
+        pytest --cov=smart_mouse --cov-report=xml --cov-report=term-missing || true
     
     - name: Test build
       run: |
@@ -90,7 +90,7 @@ jobs:
     if: github.event_name == 'release' && github.event.action == 'published'
     environment:
       name: pypi
-      url: https://pypi.org/p/humanmouse
+      url: https://pypi.org/p/smart-mouse
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     
@@ -112,7 +112,7 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/humanmouse
+      url: https://test.pypi.org/p/smart-mouse
     permissions:
       id-token: write
     

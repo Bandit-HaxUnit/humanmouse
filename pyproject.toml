@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "humanmouse"
+name = "smart-mouse"
 dynamic = ["version"]
 description = "Human-like mouse movement simulation using recorded patterns"
 readme = "README.md"
@@ -49,19 +49,19 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/humanmouse/humanmouse"
-"Bug Tracker" = "https://github.com/humanmouse/humanmouse/issues"
-Documentation = "https://github.com/humanmouse/humanmouse#readme"
-"Source Code" = "https://github.com/humanmouse/humanmouse"
+Homepage = "https://github.com/Bandit-HaxUnit/humanmouse"
+"Bug Tracker" = "https://github.com/Bandit-HaxUnit/humanmouse/issues"
+Documentation = "https://github.com/Bandit-HaxUnit/humanmouse#readme"
+"Source Code" = "https://github.com/Bandit-HaxUnit/humanmouse"
 
 [tool.setuptools]
-packages = ["human_mouse"]
+packages = ["smart_mouse"]
 
 [tool.setuptools.package-data]
-human_mouse = ["*.json"]
+smart_mouse = ["*.json"]
 
 [tool.setuptools.dynamic]
-version = {attr = "human_mouse.__version__"}
+version = {attr = "smart_mouse.__version__"}
 
 [tool.black]
 line-length = 88
@@ -95,4 +95,4 @@ testpaths = [
 ]
 python_files = ["test_*.py"]
 python_classes = ["Test*"]
-python_functions = ["test_*"] 
+python_functions = ["test_*"]
