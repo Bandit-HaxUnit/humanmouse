@@ -11,6 +11,8 @@ import random
 import time
 from pathlib import Path
 from typing import List, Optional, Tuple, Dict, Any, Union
+from pynput.mouse import Button
+
 
 try:
     from pynput.mouse import Controller
@@ -439,6 +441,12 @@ class SmartMouse:
             stats["total_paths"] += total_paths_in_bucket
         
         return stats
+    
+    def click(self, button: Button = Button.left, n: int = 1, interval: float = 0.0, **kwargs):
+        """
+        Click the mouse button.
+        """
+        self.mouse.click(button, n, interval, **kwargs)
 
 
 # Utility functions for package users

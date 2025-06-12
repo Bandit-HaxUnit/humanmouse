@@ -11,7 +11,7 @@ from .core import (
     generate_random_points
 )
 
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 __author__ = "HumanMouse Team"
 __email__ = "contact@humanmouse.com"
 __description__ = "Human-like mouse movement simulation using recorded patterns"
